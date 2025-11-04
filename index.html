@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="style.css">
+  <!--
+    Note: This HTML is static - use your existing JS to:
+      - enforce role-based visibility (admin vs user)
+      - populate auto-filled fields (author, issue date, etc.)
+      - handle chart popover (the "Chart" link exists on every page)
+      - perform search/filter and set radio selection in search results
+      - implement form submission behavior described in instructions
+  -->
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <div class="logo">L</div>
+      <h1>Library Management System</h1>
+    </div>
+
+    <div class="header-actions">
+      <a id="chart-link" class="chart-link" href="#" title="Open application flow chart">Chart</a>
+      <nav class="top-nav" aria-label="Main">
+        <!-- Use JS to hide/show nav items based on role -->
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="/pages/maintenance.html" class="nav-item admin-only">Maintenance</a>
+        <a href="/pages/transactions.html" class="nav-item">Transactions</a>
+        <a href="/pages/report.html" class="nav-item">Reports</a>
+        <a href="/pages/membership.html" class="nav-item">Membership</a>
+        <a href="/pages/user.html" class="nav-item admin-only">User Management</a>
+      </nav>
+
+      <div class="auth-actions">
+        <a href="/pages/login.html" class="btn small">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="aside">
+      <section class="card">
+        <h3>Quick Actions</h3>
+        <div class="btn-row">
+          <button class="btn" onclick="location.hash='transactions'">Transactions</button>
+          <button class="btn" onclick="location.hash='reports'">Reports</button>
+        </div>
+      </section>
+    </aside>
+
+    <section class="content">
+      <!-- Landing / Home -->
+      <article id="home" class="card page">
+        <h2>Welcome</h2>
+  <h2>Welcome to the Library Management System</h2>
+  <p>Access your account to explore our collection, manage your memberships, and keep track of your issued books. Admins can perform maintenance tasks, while users can easily browse and manage their transactions. Please login to continue.</p>
+  
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Library Management System — Basic formatting acceptable</p>
+  </footer>
+
+  <script>
+    // minor runtime hints (no behavior)
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Intentionally no heavy JS here — your existing app.js should:
+    // - hook buttons, perform localStorage reads/writes
+    // - enforce validations described in the instructions
+    // - show/hide admin-only elements based on logged-in role
+  </script>
+</body>
+</html>

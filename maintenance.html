@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance - Library</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Library Management System - Maintenance</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="maintenance.html">Maintenance</a>
+      <a href="transactions.html">Transactions</a>
+      <a href="reports.html">Reports</a>
+      <a href="membership.html">Membership</a>
+      <a href="users.html">User Management</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Add Book -->
+    <section class="card">
+      <h2>Add Book</h2>
+      <form id="form-add-book">
+        <label>Type</label>
+        <label><input type="radio" name="media" value="book" checked> Book</label>
+        <label><input type="radio" name="media" value="movie"> Movie</label>
+
+        <label>Title *</label>
+        <input id="add-title" name="title" required>
+
+        <label>Author *</label>
+        <input id="add-author" name="author" required>
+
+        <label>Serial No *</label>
+        <input id="add-serial" name="serial" required>
+
+        <button type="button" id="addbook-submit">Add Book</button>
+        <div id="addbook-msg" class="form-msg"></div>
+      </form>
+    </section>
+
+    <!-- Update Book -->
+    <section class="card">
+      <h2>Update Book</h2>
+      <form id="form-update-book">
+        <label>Search Book (title / author / serial)</label>
+        <input id="upd-search">
+        <button type="button" id="upd-search-btn">Search</button>
+        <div id="upd-results"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

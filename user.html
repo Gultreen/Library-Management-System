@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Management - Library</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Library Management System - User Management</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="maintenance.html">Maintenance</a>
+      <a href="transactions.html">Transactions</a>
+      <a href="reports.html">Reports</a>
+      <a href="membership.html">Membership</a>
+      <a href="users.html">User Management</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>User Management</h2>
+      <form id="form-user-mgmt">
+        <label>Mode</label>
+        <label><input type="radio" name="userMode" value="new" checked> New</label>
+        <label><input type="radio" name="userMode" value="existing"> Existing</label>
+
+        <label>Name *</label>
+        <input id="um-name" required>
+
+        <label>Username *</label>
+        <input id="um-username" required>
+
+        <label>Password *</label>
+        <input id="um-password" type="password" required>
+
+        <button type="button" id="um-save">Save</button>
+        <div id="um-msg" class="form-msg"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>

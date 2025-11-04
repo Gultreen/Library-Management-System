@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transactions - Library</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Library Management System - Transactions</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="maintenance.html">Maintenance</a>
+      <a href="transactions.html">Transactions</a>
+      <a href="reports.html">Reports</a>
+      <a href="membership.html">Membership</a>
+      <a href="users.html">User Management</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Issue Book -->
+    <section class="card">
+      <h2>Issue Book</h2>
+      <form id="form-issue">
+        <label>Member ID *</label>
+        <input id="issue-member" required>
+
+        <label>Book Title *</label>
+        <input id="issue-title" required>
+
+        <label>Author</label>
+        <input id="issue-author" disabled>
+
+        <label>Issue Date *</label>
+        <input type="date" id="issue-date" required>
+
+        <label>Return Date *</label>
+        <input type="date" id="issue-return-date" required>
+
+        <label>Remarks (optional)</label>
+        <textarea id="issue-remarks" rows="2"></textarea>
+
+        <button type="button" id="issue-submit">Issue Book</button>
+        <div id="issue-msg" class="form-msg"></div>
+      </form>
+    </section>
+
+    <!-- Return Book -->
+    <section class="card">
+      <h2>Return Book</h2>
+      <form id="form-return">
+        <label>Transaction ID *</label>
+        <input id="return-txid" required>
+        <button type="button" id="return-load">Load</button>
+
+        <div id="return-details"></div>
+
+        <button type="button" id="return-confirm">Confirm Return</button>
+        <div id="return-msg" class="form-msg"></div>
+      </form>
+    </section>
+  </main>
+
+  <script src="/js/app.js"></script>
+</body>
+</html>
